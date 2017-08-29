@@ -1,6 +1,7 @@
 package com.example.pacman.first_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -58,7 +59,28 @@ public class First_activity extends AppCompatActivity {
                 //end
                 //For Animation
                 Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.hi);
+                animation.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        Intent intent = new Intent(First_activity.this,second_activity.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
                 btn.startAnimation(animation);
+
+
+
             }
         });
 

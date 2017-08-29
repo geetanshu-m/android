@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".second_activity"
+
+            android:parentActivityName=".First_activity"> <!--For Back Button-->
+        </activity>
     </application>
 
 </manifest>
