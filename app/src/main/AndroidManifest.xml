@@ -15,15 +15,18 @@
 
         </activity>
         <activity android:name=".First_activity">
+
+        </activity>
+        <activity android:name=".second_activity"
+
+            android:parentActivityName=".First_activity"> <!--For Back Button-->
+        </activity>
+        <activity android:name=".image_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".second_activity"
-
-            android:parentActivityName=".First_activity"> <!--For Back Button-->
         </activity>
     </application>
 
